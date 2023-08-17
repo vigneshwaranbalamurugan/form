@@ -1,0 +1,164 @@
+<html>  
+<head>
+  <title>ADMISSION FORM</title>
+  <style>
+  .dark{background-color:black;}
+  body{
+      background-color:#23dc5e;
+	   
+  }
+  </style>
+</head>
+<body>
+<h1 "font-size:30px"><u><center>FORM </center></u></h1>
+ <form action="submit.html">
+ <fieldset >
+  
+   <legend><h2>PERSONAL DETAILS</h2></legend></h2>
+
+
+	<table cellpadding="2" cellspacing="2">
+	<tr>
+	<td><label><b>NAME</b></label></td>
+   <td><input type="text" name="name" size="15" maxlength="35" placeholder="Enter name" autofocus required></td>
+	</tr>
+   <tr>
+	<td><b>AGE</b></td>
+	<td><input type="number" name="age" min="3" max="10" step="1" autofocus required></td>
+	</tr>
+	<br>
+	<tr>
+	<td><label><b>GENDER</b></label></td>
+	<td><input type="radio" id="Male" name="gender" value="m">
+   <label>Male</label>
+	<input type="radio" id="Female" name="gender" value="f">
+	<label>Female</label></td>
+	</tr>
+	<tr>
+	<td><b>D.O.B</b></td><td><input type="date" name="dob" ></td>
+	</tr>
+	<tr>
+   <td><label><b>MOB NO</b></label></td>
+	<td><input type="number" name="mobile no" placeholder="Enter mobile number"  maxlength="10"     step="1"  autofocus required></td>
+   </tr>
+   <tr>
+	<td><label><b>E-MAIL</b></label></td>
+	<td><input type="email" size="15" name="e-mail" required></td>
+	</tr>
+	<tr>
+	<td><label><b>PASSWORD</b></label></td>
+	<td><input type="password" name="pass" maxlength="10" placeholder="Enter password" size="15" id="password" required >
+	<input type="checkbox" onclick="myFunct()"><label>show password</td>
+	</tr>
+	
+   <tr>
+   <td><label><b>COLLEGE NAME</b></label></td>
+	<td><input type="text" name="college" maxlength="1000" placeholder="Enter college name" size="15" required></td>
+	</tr>
+	<tr>
+   <td><Label><b>PROGRAMME</b></label></td>
+	<td><input type="radio"id="BE" name="prog" value="BE">
+   <label>B.E</label>
+	<input type="radio"id="ME" name="prog" value="BE">
+   <label>M.E</label>
+   </tr>
+   <tr>
+   <td><Label><b>MODE OF ADMISSION</b></label></td>
+	<td><input type="radio"id="COUNSELLING" name="mode" value="counselling">
+   <label>Counselling</label>
+	<input type="radio"id="management" name="mode" value="counselling">
+   <label>Management</label></td>
+   </tr>
+   
+   <tr>
+   <td><label><b>CUT OFF</b></label></td>
+	<td><input type="number" name="cutoff" placeholder="Cutoff"  maxlength="10"     step="1"  autofocus required></td>
+   </tr>
+   <tr>
+   <td><label><b>PHYSICS</b></label></td>
+	<td><input type="number" name="phy" placeholder="Enter Your Physics Mark"  maxlength="10"     step="1"  autofocus required></td>
+   </tr>
+   <tr>
+   <td><label><b>MATHS</b></label></td>
+	<td><input type="number" name="mat" placeholder="Enter Your Maths Mark"  maxlength="10"     step="1"  autofocus required></td>
+   </tr>
+   <tr>
+   <td><label><b>CHEMISTRY</b></label></td>
+	<td><input type="number" name="chem" placeholder="Enter Your Chemistry Mark"  maxlength="10"     step="1"  autofocus required></td>
+   </tr>
+	<tr>
+	<td><label><b>DEPARTMENT</b></label></td>
+ 	<td><select>
+    	<option>COMPUTER SCIENCE AND ENGINEERING</option>
+		<option>INFORMTION TECHNOLOGY</option>
+		<option>ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+		<option>ELECTRICAL AND ELECTRONICS ENGIBNEERING</option>
+		<Option>MECHANICAL ENGINEERING</option>
+		<Option>CHEMICAL ENGINEERING</option>
+		<option>ELECTRICAL AND INSTRUMENTATION ENGINEERING</option>
+      <option>MECHATRONIC</option>
+		<option>BIO MEDICAL ENGINEERING</option>
+		<option>BIO TECHNOLOGY</option>
+		<option selected>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
+		<option>ARTIFICIAL INTELLIGENCE AND MACHINE LEARING</option>
+	</select></td>
+	</tr>
+
+		
+	<tr>
+	<td><label><b>ADDRESS</b></label><br><br></td>
+	<td><textarea rows="10" cols="20" name="add" tabindex="3" required></textarea></td>
+	</tr>
+	<tr>
+   <td><b>REASON</b></td><td><textarea rows="10" cols="20" name="reason" tabindex="3" required></textarea></td>
+	</tr>
+	<tr>
+	<td><b>UPLOAD</b></td><td><input type="file" name="upload" multiple ></td>
+	</tr>
+	<tr>
+   <td><Label><b>HOSTEL OR DS</b></label></td>
+	<td><input type="radio"id="hosteller" name="mode" value="hosteller">
+   <label>Hosteller</label>
+	<input type="radio"id="DAYSCHOLLOR" name="mode" value="dayscholr">
+   <label>Dayscholler</label></td>
+   </tr>
+	</table>
+	<br><br><br>
+   </fieldset><br><br>
+</form>
+	<fieldset>
+	<legend><h2>ADMISSION DETAILS</h2></legend>
+	<table>
+	<tr>
+	<td>MONTH</td><td><input type="month" name="month"></td>
+	</tr>
+	<pre></pre>
+	<tr>
+	<td>TIME</td><td><input type="time" name="time"></td>
+	</tr>
+	<tr>
+	<td>DATE TIME</td><td><input type="date time-local"name="timelocal"></td>
+	</tr>
+	<tr>
+	<td>WEEK</td><td><input type="week" name="week"></td>
+	</tr>
+	</table>
+	</fieldset>
+	<br><br>
+   <center><button><a href="C:\New folder\submit.html"><input type="submit"></a></button></center>
+		<script>
+function myFunct() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+</script>
+
+  </body>
+</html>  
+
+ 
