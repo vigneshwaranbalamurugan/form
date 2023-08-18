@@ -11,7 +11,7 @@
 </head>
 <body>
 <h1 "font-size:30px"><u><center>FORM </center></u></h1>
- <form action="submit.html">
+ <form name='submit-to-google-sheet'>>
  <fieldset >
   
    <legend><h2>PERSONAL DETAILS</h2></legend></h2>
@@ -39,7 +39,7 @@
 	</tr>
 	<tr>
    <td><label><b>MOB NO</b></label></td>
-	<td><input type="number" name="mobile no" placeholder="Enter mobile number"  maxlength="10"     step="1"  autofocus required></td>
+	<td><input type="number" name="mobileno" placeholder="Enter mobile number"  maxlength="10"     step="1"  autofocus required></td>
    </tr>
    <tr>
 	<td><label><b>E-MAIL</b></label></td>
@@ -88,19 +88,19 @@
    </tr>
 	<tr>
 	<td><label><b>DEPARTMENT</b></label></td>
- 	<td><select>
+ 	<td><select name="dept">
     	<option>COMPUTER SCIENCE AND ENGINEERING</option>
-		<option>INFORMTION TECHNOLOGY</option>
-		<option>ELECTRONICS AND COMMUNICATION ENGINEERING</option>
-		<option>ELECTRICAL AND ELECTRONICS ENGIBNEERING</option>
-		<Option>MECHANICAL ENGINEERING</option>
-		<Option>CHEMICAL ENGINEERING</option>
-		<option>ELECTRICAL AND INSTRUMENTATION ENGINEERING</option>
-      <option>MECHATRONIC</option>
-		<option>BIO MEDICAL ENGINEERING</option>
-		<option>BIO TECHNOLOGY</option>
-		<option selected>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
-		<option>ARTIFICIAL INTELLIGENCE AND MACHINE LEARING</option>
+		<option value="INFORMTION TECHNOLOGY">INFORMTION TECHNOLOGY</option>
+		<option value="ELECTRONICS AND COMMUNICATION ENGINEERING">ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+		<option value="ELECTRICAL AND ELECTRONICS ENGIBNEERING">ELECTRICAL AND ELECTRONICS ENGIBNEERING</option>
+		<Option value="MECHANICAL ENGINEERING">MECHANICAL ENGINEERING</option>
+		<Option value="CHEMICAL ENGINEERING">CHEMICAL ENGINEERING</option>
+		<option value="ELECTRICAL AND INSTRUMENTATION ENGINEERING">ELECTRICAL AND INSTRUMENTATION ENGINEERING</option>
+                <option value="MECHATRONIC">MECHATRONIC</option>
+		<option value="BIO MEDICAL ENGINEERING">BIO MEDICAL ENGINEERING</option>
+		<option value="BIO TECHNOLOGY">BIO TECHNOLOGY</option>
+		<option selected value="">ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
+		<option value="ARTIFICIAL INTELLIGENCE AND MACHINE LEARING">ARTIFICIAL INTELLIGENCE AND MACHINE LEARING</option>
 	</select></td>
 	</tr>
 
@@ -155,7 +155,15 @@ function myFunct() {
     x.type = "password";
   }
 }
+ const scriptURL = 'https://script.google.com/macros/s/AKfycbwuokfBAreCyNsFF46eqW3c4EXIF8yEqnTSwk-020Sv5yWYZ-NjwHinidGtI5MdHW5T/exec'
+  const form = document.forms['submit-to-google-sheet']
 
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
 </script>
 
   </body>
