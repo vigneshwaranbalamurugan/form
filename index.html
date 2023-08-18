@@ -60,7 +60,7 @@
 
   </style>
 </head>
-<body>
+<body onload="myload">
 <h3 style="font-size: 30px"><u><center>FORM </center></u></h3>
  <form name='submit-to-google-sheet'>
     <div class="container container-fluid">
@@ -198,6 +198,9 @@ function myFunct() {
       loadingOverlay.style.display = 'none'; // Corrected the ID
     });
 });
+function myload(){
+	alert("THIS PAGE IS DEVELOPED BY VIGNESHWARAN");
+}
 </script>
 	<div id="loadingOverlay" class="loading-overlay">
   <div class="loader"></div>
