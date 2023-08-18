@@ -10,16 +10,26 @@
   <style>
   .dark{background-color:black;}
   body{
-      background-color:#1ecbe1;
-	   
+      background-color:#1ecbe1;	   
   }
-	  table {
+ table {
     border-collapse: collapse;
     width: 100%;
     border: 2px solid black;
-	border-style:dotted;
-	cellpadding:3px;
-	cellspacing:3px;
+    border-style:dotted;
+    cellpadding:3px;
+    cellspacing:3px;
+    background-color: transparent;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    background-color: transparent;
+    border-width: 2px;
+    border-color:black;
   }
   </style>
 </head>
@@ -27,11 +37,9 @@
 <h3 style="font-size: 30px"><u><center>FORM </center></u></h3>
  <form name='submit-to-google-sheet'>
  <fieldset >
-  
    <legend><h4>PERSONAL DETAILS</h4></legend></h2>
-
     <div class="container container-fluid">
-  <div class="table-responsive" >
+      <div class="table-responsive" >
 	<table cellpadding="2" cellspacing="2" class="table">
 	<tr>
 	<td><label><b>NAME</b></label></td>
@@ -125,9 +133,6 @@
 	<td><textarea rows="10" cols="20" name="add" tabindex="3" required></textarea></td>
 	</tr>
 	<tr>
-   <td><b>REASON</b></td><td><textarea rows="10" cols="20" name="reason" tabindex="3" required></textarea></td>
-	</tr>
-	<tr>
    <td><Label><b>HOSTEL OR DS</b></label></td>
 	<td><input type="radio"id="hosteller" name="hostel" value="hosteller">
    <label>Hosteller</label>
@@ -161,7 +166,6 @@ function myFunct() {
       .catch(error => console.error('Error!', error.message))
   })
 </script>
-
   </body>
 </html>  
 
