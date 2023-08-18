@@ -10,7 +10,7 @@
   <style>
   .dark{background-color:black;}
   body{
-      background-color:#23dc5e;
+      background-color:#1ecbe1;
 	   
   }
 	  table {
@@ -24,22 +24,22 @@
   </style>
 </head>
 <body>
-<h1 style="font-size: 30px"><u><center>FORM </center></u></h1>
+<h3 style="font-size: 30px"><u><center>FORM </center></u></h3>
  <form name='submit-to-google-sheet'>
  <fieldset >
   
-   <legend><h2>PERSONAL DETAILS</h2></legend></h2>
+   <legend><h4>PERSONAL DETAILS</h4></legend></h2>
 
     <div class="container container-fluid">
   <div class="table-responsive" >
 	<table cellpadding="2" cellspacing="2" class="table">
 	<tr>
 	<td><label><b>NAME</b></label></td>
-   <td><input type="text" name="name" size="15" maxlength="35" placeholder="Enter name" autofocus required></td>
+   <td><input type="text" name="name" size="15" maxlength="50" placeholder="Enter name" autofocus required></td>
 	</tr>
    <tr>
 	<td><b>AGE</b></td>
-	<td><input type="number" name="age" min="3" max="10" step="1" autofocus required></td>
+	<td><input type="number" name="age" min="1" max="50" step="1" autofocus required></td>
 	</tr>
 	<br>
 	<tr>
@@ -87,19 +87,19 @@
    
    <tr>
    <td><label><b>CUT OFF</b></label></td>
-	<td><input type="number" name="cutoff" placeholder="Cutoff" step="0.01"  maxlength="10"     step="1"  autofocus required></td>
+	<td><input type="number" name="cutoff" placeholder="Cutoff" step="0.01"  maxlength="10"  max="200"   step="1"  autofocus required></td>
    </tr>
    <tr>
    <td><label><b>PHYSICS</b></label></td>
-	<td><input type="number" name="phy" placeholder="Enter Your Physics Mark"  maxlength="10"     step="1"  autofocus required></td>
+	<td><input type="number" name="phy" placeholder="Enter Your Physics Mark"  maxlength="10"   max="100"  step="1"  autofocus required></td>
    </tr>
    <tr>
    <td><label><b>MATHS</b></label></td>
-	<td><input type="number" name="mat" placeholder="Enter Your Maths Mark"  maxlength="10"     step="1"  autofocus required></td>
+	<td><input type="number" name="mat" placeholder="Enter Your Maths Mark"  maxlength="10"   max="100"  step="1"  autofocus required></td>
    </tr>
    <tr>
    <td><label><b>CHEMISTRY</b></label></td>
-	<td><input type="number" name="chem" placeholder="Enter Your Chemistry Mark"  maxlength="10"     step="1"  autofocus required></td>
+	<td><input type="number" name="chem" placeholder="Enter Your Chemistry Mark"  maxlength="10"    max="100" step="1"  autofocus required></td>
    </tr>
 	<tr>
 	<td><label><b>DEPARTMENT</b></label></td>
@@ -126,9 +126,6 @@
 	</tr>
 	<tr>
    <td><b>REASON</b></td><td><textarea rows="10" cols="20" name="reason" tabindex="3" required></textarea></td>
-	</tr>
-	<tr>
-	<td><b>UPLOAD</b></td><td><input type="file" name="upload" multiple ></td>
 	</tr>
 	<tr>
    <td><Label><b>HOSTEL OR DS</b></label></td>
