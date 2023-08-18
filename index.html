@@ -1,11 +1,25 @@
 <html>  
 <head>
   <title>ADMISSION FORM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"></script>
   <style>
   .dark{background-color:black;}
   body{
       background-color:#23dc5e;
 	   
+  }
+	  table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid black;
+	border-style:dotted;
+	cellpadding:3px;
+	cellspacing:3px;
   }
   </style>
 </head>
@@ -16,8 +30,9 @@
   
    <legend><h2>PERSONAL DETAILS</h2></legend></h2>
 
-
-	<table cellpadding="2" cellspacing="2">
+    <div class="container container-fluid">
+  <div class="table-responsive" >
+	<table cellpadding="2" cellspacing="2" class="table">
 	<tr>
 	<td><label><b>NAME</b></label></td>
    <td><input type="text" name="name" size="15" maxlength="35" placeholder="Enter name" autofocus required></td>
@@ -29,9 +44,9 @@
 	<br>
 	<tr>
 	<td><label><b>GENDER</b></label></td>
-	<td><input type="radio" id="Male" name="gender" value="m">
+	<td><input type="radio" id="Male" name="gender" value="male">
    <label>Male</label>
-	<input type="radio" id="Female" name="gender" value="f">
+	<input type="radio" id="Female" name="gender" value="female">
 	<label>Female</label></td>
 	</tr>
 	<tr>
@@ -59,20 +74,20 @@
    <td><Label><b>PROGRAMME</b></label></td>
 	<td><input type="radio"id="BE" name="prog" value="BE">
    <label>B.E</label>
-	<input type="radio"id="ME" name="prog" value="BE">
+	<input type="radio"id="ME" name="prog" value="ME">
    <label>M.E</label>
    </tr>
    <tr>
    <td><Label><b>MODE OF ADMISSION</b></label></td>
 	<td><input type="radio"id="COUNSELLING" name="mode" value="counselling">
    <label>Counselling</label>
-	<input type="radio"id="management" name="mode" value="counselling">
+	<input type="radio"id="management" name="mode" value="management">
    <label>Management</label></td>
    </tr>
    
    <tr>
    <td><label><b>CUT OFF</b></label></td>
-	<td><input type="number" name="cutoff" placeholder="Cutoff"  maxlength="10"     step="1"  autofocus required></td>
+	<td><input type="number" name="cutoff" placeholder="Cutoff" step="0.01"  maxlength="10"     step="1"  autofocus required></td>
    </tr>
    <tr>
    <td><label><b>PHYSICS</b></label></td>
@@ -123,32 +138,14 @@
    <label>Dayscholler</label></td>
    </tr>
 	</table>
+  </div>
+    </div>
 	<br><br><br>
    </fieldset><br><br>
-
-	<fieldset>
-	<legend><h2>ADMISSION DETAILS</h2></legend>
-	<table>
-	<tr>
-	<td>MONTH</td><td><input type="month" name="month"></td>
-	</tr>
-	<pre></pre>
-	<tr>
-	<td>TIME</td><td><input type="time" name="time"></td>
-	</tr>
-	<tr>
-	<td>DATE TIME</td><td><input type="date time-local"name="timelocal"></td>
-	</tr>
-	<tr>
-	<td>WEEK</td><td><input type="week" name="week"></td>
-	</tr>
-	</table>
-	</fieldset>
-	<br><br>
    <center><input type="submit" name="submit">
    </center>
  </form>
-		<script>
+<script>
 function myFunct() {
   var x = document.getElementById("password");
   if (x.type === "password") {
