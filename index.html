@@ -177,14 +177,14 @@ function myFunct() {
   const form = document.forms['submit-to-google-sheet']
 
   form.addEventListener('submit', e => {
-    e.preventDefault()
+    e.preventDefault();
 	   loader.style.display = 'block';
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
         console.log('Success!', response);
-	loader.style.display = 'none'; 
         alert('Form submitted successfully!');
         form.reset(); // Reset the form
+	loader.style.display = 'none'; 
       })
     .catch(error => {
       console.error('Error!', error.message);
