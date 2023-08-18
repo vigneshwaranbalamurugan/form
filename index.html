@@ -182,21 +182,21 @@ function myFunct() {
  const scriptURL = 'https://script.google.com/macros/s/AKfycbwuokfBAreCyNsFF46eqW3c4EXIF8yEqnTSwk-020Sv5yWYZ-NjwHinidGtI5MdHW5T/exec'
   const form = document.forms['submit-to-google-sheet']
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-	   loading-overlay.style.display = 'block';
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        console.log('Success!', response);
-	loading-overlay.style.display = 'none'; 
-        alert('Form submitted successfully!');
-        form.reset(); // Reset the form
-      })
+ form.addEventListener('submit', e => {
+  e.preventDefault();
+  loadingOverlay.style.display = 'block'; // Corrected the ID
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      console.log('Success!', response);
+      loadingOverlay.style.display = 'none'; // Corrected the ID
+      alert('Form submitted successfully!');
+      form.reset(); // Reset the form
+    })
     .catch(error => {
       console.error('Error!', error.message);
-      loader.style.display = 'none'; // Hide the loader if there's an error
+      loadingOverlay.style.display = 'none'; // Corrected the ID
     });
-  })
+});
 </script>
 	<div id="loadingOverlay" class="loading-overlay">
   <div class="loader"></div>
