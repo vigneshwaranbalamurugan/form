@@ -184,7 +184,7 @@ function myFunct() {
 
  form.addEventListener('submit', e => {
   e.preventDefault();
-  loadingOverlay.style.display = 'block'; // Corrected the ID
+  loadingOverlay.style.display = 'flex'; // Corrected the ID
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
     .then(response => {
       console.log('Success!', response);
