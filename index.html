@@ -37,8 +37,6 @@
 <body>
 <h3 style="font-size: 30px"><u><center>FORM </center></u></h3>
  <form name='submit-to-google-sheet'>
- <fieldset >
-   <legend><h4>PERSONAL DETAILS</h4></legend></h2>
     <div class="container container-fluid">
       <div class="table-responsive" >
 	<table cellpadding="2" cellspacing="2" class="table">
@@ -71,7 +69,7 @@
 	</tr>
 	<tr>
 	<td><label><b>PASSWORD</b></label></td>
-	<td><input type="password" name="pass" maxlength="10" placeholder="Enter password" size="15" id="password" required >
+	<td><input type="password" name="pass" maxlength="10" placeholder="Enter password" size="15" id="password" readonly >
 	<input type="checkbox" onclick="myFunct()"><label>show password</td>
 	</tr>
 	
@@ -143,8 +141,6 @@
 	</table>
   </div>
     </div>
-	<br><br><br>
-   </fieldset><br><br>
    <center><input type="submit" name="submit">
    </center>
  </form>
