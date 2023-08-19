@@ -168,7 +168,7 @@
   </div>
     </div>
 	 <br>
-   <center><button type="submit" name="submit" onclick="confirmSubmit(event);return confirm()" >submit</button>
+   <center><button type="submit" name="submit" onclick="confirmSubmit(event);" >submit</button>
    </center>
  </form>
 <script>
@@ -212,9 +212,7 @@ function confirmSubmit(e) {
       
     }
   }
-}
-function confirm(){
-	 return confirm("Are you sure you want to submit the form?");
+  return confirm("Are you sure you want to submit the form?");
 }
 </script>
 	<div id="loadingOverlay" class="loading-overlay">
