@@ -168,7 +168,7 @@
   </div>
     </div>
 	 <br>
-   <center><button type="submit" name="submit" onclick=" return confirmSubmit()" >submit</button>
+   <center><button type="submit" name="submit" onclick=" return confirmSubmit(event)" >submit</button>
    </center>
  </form>
 <script>
@@ -201,7 +201,16 @@ function myFunct() {
 function myload(){
 	alert("DEVELOPED BY VIGNESHWARAN");
 }
-	function confirmSubmit() {
+	function confirmSubmit(e) {
+	 const requiredFields = ['name', 'email', 'password'];
+  for (const field of requiredFields) {
+    if (document.querySelector(`input[name="${field}"]`).value === '') {
+      // Show an error message
+      alert(`Please enter a value for the "${field}" field.`);
+      e.preventDefault();
+      return;
+    }
+  }
       return confirm("Are you sure you want to submit the form?");
 	}
 </script>
