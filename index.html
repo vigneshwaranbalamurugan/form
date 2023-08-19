@@ -72,22 +72,22 @@
 	</tr>
    <tr>
 	<td><b>AGE</b></td>
-	<td><input type="number" name="age" min="1" max="50" step="1" autofocus required></td>
+	<td><input type="number" name="age" min="1" max="50" step="1" required></td>
 	</tr>
 	<br>
 	<tr>
 	<td><label><b>GENDER</b></label></td>
-	<td><input type="radio" id="Male" name="gender" value="male">
+	<td><input type="radio" id="Male" name="gender" value="male" required>
    <label>Male</label>
-	<input type="radio" id="Female" name="gender" value="female">
+	<input type="radio" id="Female" name="gender" value="female" required>
 	<label>Female</label></td>
 	</tr>
 	<tr>
-	<td><b>D.O.B</b></td><td><input type="date" name="dob" ></td>
+	<td><b>D.O.B</b></td><td><input type="date" name="dob" required></td>
 	</tr>
 	<tr>
    <td><label><b>MOB NO</b></label></td>
-	<td><input type="number" name="mobileno" placeholder="Enter mobile number"  maxlength="10"     step="1"  autofocus required></td>
+	<td><input type="number" name="mobileno" placeholder="Enter mobile number"  maxlength="10"     step="1"  required></td>
    </tr>
    <tr>
 	<td><label><b>E-MAIL</b></label></td>
@@ -95,7 +95,7 @@
 	</tr>
 	<tr>
 	<td><label><b>PASSWORD</b></label></td>
-	<td><input type="password" name="pass" maxlength="10" value="123456789" size="15" id="password" readonly >
+	<td><input type="password" name="pass" maxlength="10" value="123456789" size="15" id="password" readonly disable >
 	<input type="checkbox" onclick="myFunct()"><label>show password</td>
 	</tr>
 	
@@ -105,34 +105,34 @@
 	</tr>
 	<tr>
    <td><Label><b>PROGRAMME</b></label></td>
-	<td><input type="radio"id="BE" name="prog" value="BE">
+	<td><input type="radio"id="BE" name="prog" value="BE" required>
    <label>B.E</label>
-	<input type="radio"id="ME" name="prog" value="ME">
+	<input type="radio"id="ME" name="prog" value="ME" required>
    <label>M.E</label>
    </tr>
    <tr>
    <td><Label><b>MODE OF ADMISSION</b></label></td>
-	<td><input type="radio"id="COUNSELLING" name="mode" value="counselling">
+	<td><input type="radio"id="COUNSELLING" name="mode" value="counselling" required>
    <label>Counselling</label>
-	<input type="radio"id="management" name="mode" value="management">
+	<input type="radio"id="management" name="mode" value="management" required>
    <label>Management</label></td>
    </tr>
    
    <tr>
    <td><label><b>CUT OFF</b></label></td>
-	<td><input type="number" name="cutoff" placeholder="Cutoff" step="0.01"  maxlength="10"  max="200"   step="1"  autofocus required></td>
+	<td><input type="number" name="cutoff" placeholder="Cutoff" step="0.01"  maxlength="10"  max="200"   step="1"  required></td>
    </tr>
    <tr>
    <td><label><b>PHYSICS</b></label></td>
-	<td><input type="number" name="phy" placeholder="Enter Your Physics Mark"  maxlength="10"   max="100"  step="1"  autofocus required></td>
+	<td><input type="number" name="phy" placeholder="Enter Your Physics Mark"  maxlength="10"   max="100"  step="1"   required></td>
    </tr>
    <tr>
    <td><label><b>MATHS</b></label></td>
-	<td><input type="number" name="mat" placeholder="Enter Your Maths Mark"  maxlength="10"   max="100"  step="1"  autofocus required></td>
+	<td><input type="number" name="mat" placeholder="Enter Your Maths Mark"  maxlength="10"   max="100"  step="1"  required></td>
    </tr>
    <tr>
    <td><label><b>CHEMISTRY</b></label></td>
-	<td><input type="number" name="chem" placeholder="Enter Your Chemistry Mark"  maxlength="10"    max="100" step="1"  autofocus required></td>
+	<td><input type="number" name="chem" placeholder="Enter Your Chemistry Mark"  maxlength="10"    max="100" step="1"   required></td>
    </tr>
 	<tr>
 	<td><label><b>DEPARTMENT</b></label></td>
@@ -159,9 +159,9 @@
 	</tr>
 	<tr>
    <td><Label><b>HOSTEL OR DS</b></label></td>
-	<td><input type="radio"id="hosteller" name="hostel" value="hosteller">
+	<td><input type="radio"id="hosteller" name="hostel" value="hosteller" required>
    <label>Hosteller</label>
-	<input type="radio"id="DAYSCHOLLOR" name="hostel" value="dayscholr">
+	<input type="radio"id="DAYSCHOLLOR" name="hostel" value="dayscholr" required>
    <label>Dayscholler</label></td>
    </tr>
 	</table>
