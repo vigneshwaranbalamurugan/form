@@ -24,5 +24,7 @@ This form collects essential details from students applying for admission. It's 
 2. **Submission**: Fill in the required fields and click "Submit."
 3. **Data Storage**: All submitted data is automatically stored in Google Sheets.
 
+## **Screenshots**
+<img src="./Screenshots/Form_Sample.png" alt="Form" />
 ---
 Feel free to provide feedback or contribute to this project!
